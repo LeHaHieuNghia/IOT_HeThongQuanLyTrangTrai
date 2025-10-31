@@ -3,7 +3,7 @@ import Typography from '@mui/material/Typography';
 import AnalyticEcommerce from '../components/cards/AnalyticEcommerce';
 import UniqueVisitorCard from '../components/cards/uniqueVisitorCard';
 import useTotalEnvironmentData from '../service/useTotalEnvironmentData';
-
+import WeatherForecast from '../components/forecast';
 // ==============================|| DASHBOARD - DEFAULT ||============================== //
 
 const formatDate = (date) => date.toISOString().split('T')[0];
@@ -75,6 +75,10 @@ export default function dashboardDefault() {
         );
       })}
 
+      <Grid>
+        <Typography variant="subtitle1">Dự báo thời tiết</Typography>
+        <WeatherForecast />
+      </Grid>
       <Grid size={{ xs: 12, md: 7, lg: 12 }}>
         <UniqueVisitorCard />
       </Grid>
